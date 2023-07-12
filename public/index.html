@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>albums</title>
+    <style>
+        body{
+            background-color: rgb(228, 228, 228);
+        }
+        th, td, p, input {
+            font:14px Verdana;
+        }
+        table, th, td 
+        {
+            border: solid 1px rgb(4, 4, 4);
+            border-collapse: collapse;
+            padding: 4px 20px;
+            text-align: center;
+        }
+        th {
+            font-weight:bold;
+        }
+        form#create_form{
+            border: 1px solid rgb(1, 117, 1);
+            background-color: rgb(124, 173, 245);
+            padding: 4px;
+        }
+        p#show_album{
+            background-color: rgb(39, 113, 113);
+            border: 1px solid rgb(1, 1, 236);
+            padding: 4px;
+        }
+        p#create_err{
+            color: rgb(254, 5, 5);
+        }
+    </style>
+</head>
+<body onload="create_table()">
+    <h1>List of albums:</h1>
+    <p id="show_data"></p>
+    <p id="show_album"></p>
+    <form id="create_form">
+        <h2>Create album</h2>
+        <label for="create_title">Title</label><br>
+        <input type="text" id="create_title"><br>
+        <label for="create_artist">Artist</label><br>
+        <input type="text" id="create_artist"><br>
+        <label for="create_year">Year</label><br>
+        <input type="year" id="create_year"><br>
+        <p id="create_err"></p>
+        <button type="submit">Create album</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
